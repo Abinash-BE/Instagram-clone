@@ -192,3 +192,25 @@ body {
   text-overflow: ellipsis;
 }
 
+.cancel-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.cancel-button:hover {
+  background: rgba(0,0,0,0.7);
+}

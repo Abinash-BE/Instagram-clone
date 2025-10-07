@@ -56,6 +56,7 @@ function Profile() {
             </div>
 
             <p className="bio">{ProfileData.bio}</p>
+            <p className="bio"> 💼 CEO | Wayne Enterprises <br /> 🌆 Living in Gotham <br /> ⚡ Billionaire. Philanthropist. Gentleman <br /> 🦇 Just a man with a vision. <br /> </p>
             <p>|"It's not who I am underneath, but what I do that defines me"|</p>
           </div>
         </div>

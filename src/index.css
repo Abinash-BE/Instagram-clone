@@ -13,6 +13,10 @@ body {
   width: 30%;
 }
 
+.w-50 {
+  width: 50%
+}
+
 .logo-text {
   width: 100px;
 }
@@ -213,4 +217,105 @@ body {
 
 .cancel-button:hover {
   background: rgba(0,0,0,0.7);
+}
+
+/* -------- Base Layout -------- */
+.side-bar {
+  width: 20%;
+}
+
+.feed-section {
+  width: 50%;
+}
+
+.suggestions-section {
+  width: 30%;
+}
+
+/* -------- Mobile Bottom Nav -------- */
+.mobile-bottom-nav {
+  display: none;
+}
+
+
+/* -------- Responsive -------- */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .side-bar {
+    width: 15%;
+  }
+  .feed-section {
+    width: 60%;
+  }
+  .suggestions-section {
+    width: 25%;
+  }
+}
+
+/* Phones (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Hide Sidebar fully */
+  .side-bar {
+    display: none;
+  }
+
+  /* Feed takes full width */
+  .feed-section {
+    width: 100%;
+  }
+
+  /* Hide Suggestions */
+  .suggestions-section {
+    display: none;
+  }
+
+  /* Show Mobile Bottom Nav */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    justify-content: space-around;
+    padding: 8px 0;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+  }
+
+  /* .sidebar-wrapper{
+    display:none;
+  } */
+
+  .sidebar-wrapper{
+    display:none !important
+    
+  }
+
+  .suggestions-wrapper{
+    display:none !important
+  }
+
+  .feed-wrapper{
+    width: 100% !important
+  }
+
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .story-db {
+    width: 55px;
+    height: 55px;
+  }
+
+  .post-img {
+    height: 150px !important;
+  }
+
+  .profile-img {
+    width: 90px !important;
+    height: 90px !important;
+  }
 }

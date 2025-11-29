@@ -11,7 +11,7 @@ function Suggestions() {
 
   return (
     <div>
-      <div className='suggestions w-75 m-4'>
+      <div className='suggestions-section w-75 m-4'>
         {PROFILE ? (
           <div
             className='d-flex align-items-center'

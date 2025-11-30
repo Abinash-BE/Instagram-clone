@@ -5,15 +5,15 @@ body {
   font-weight: 450;
 }
 
-.w-20 {
+.sidebar-wrapper {
   width: 20%;
 }
 
-.w-30 {
+.suggestions-wrapper {
   width: 30%;
 }
 
-.w-50 {
+.feed-section {
   width: 50%
 }
 
@@ -284,10 +284,6 @@ body {
     z-index: 999;
   }
 
-  /* .sidebar-wrapper{
-    display:none;
-  } */
-
   .sidebar-wrapper{
     display:none !important
     
@@ -318,4 +314,122 @@ body {
     width: 90px !important;
     height: 90px !important;
   }
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    width: 70px;
+    padding-left: 10px;
+  }
+
+  .sidebar-wrapper img.logo-text {
+    width: 40px;
+  }
+}
+
+/* Profile page adjusts when sidebar shrinks */
+.profile-container {
+  margin-left: 230px;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-container {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+/* Highlights scroll */
+.highlight-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.highlight-circle-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ddd;
+}
+
+.highlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-img {
+  height: 140px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .post-img {
+    height: 200px;
+  }
+}
+
+.profile-container {
+  margin-left: 260px; /* Must match Sidebar width */
+  padding: 20px;
+  width: calc(100% - 260px);
+}
+@media (max-width: 768px) {
+  .profile-container {
+    margin-left: 90px; /* Adjusted for smaller sidebar */
+    width: calc(100% - 90px);
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-container {
+    margin-left: 0;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/* MOBILE BOTTOM NAVBAR */
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 12px 0;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    z-index: 2000;
+  }
+
+  .bottom-nav i {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+
+  body {
+    padding-bottom: 70px; /* Avoid content hiding behind navbar */
+  }
+}
+
+.bottom-nav-profile{
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0px;
 }

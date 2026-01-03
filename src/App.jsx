@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import Feed from './Feed'
 import Suggestions from './Suggessions'
-import BottomNav from './bottomNav'
+import BottomNav from './BottomNav'
 
 function App() {
   return (

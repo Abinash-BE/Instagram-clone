@@ -34,7 +34,7 @@ function ViewStory() {
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 story-background-overlay position-relative">
-      
+
       {/* Cancel Button */}
       <button className="cancel-button" onClick={() => navigate('/')}>
         &times;
@@ -48,7 +48,14 @@ function ViewStory() {
       )}
 
       {/* Story Image */}
-      <img className="story-image" src={story.image} alt="story" />
+      <div className="story-media-wrapper">
+        <img
+          className="story-image"
+          src={story.image}
+          alt="story"
+          loading="lazy"
+        />
+      </div>
 
       {/* Next Story */}
       {nextId <= totalStories && (

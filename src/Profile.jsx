@@ -1,14 +1,18 @@
-import React from "react";
-import { PROFILE } from "./data";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ProfileContext } from "./ProfileContext.jsx";
 
 function Profile() {
-  const ProfileData = PROFILE;
+  const { profile } = useContext(ProfileContext);
 
   const navigate = useNavigate();
-    const handleHomeClick = () => {
-      navigate('/');
-    } 
+  const handleHomeClick = () => {
+    navigate('/');
+  };
+
+  const handleEditClick = () => {
+    navigate('/edit-profile');
+  };
 
   return (
     <div>
@@ -39,16 +43,16 @@ function Profile() {
         <div className="row align-items-center mt-3">
           <div className="col-12 col-md-4 text-center mb-3">
             <img
-              src={ProfileData.profile_picture}
-              alt={ProfileData.username}
+              src={profile?.profile_picture}
+              alt={profile?.username}
               className="rounded-circle profile-img"
             />
           </div>
 
           <div className="col-12 col-md-8 text-center text-md-start">
             <div className="d-flex flex-column flex-md-row align-items-center mb-2 gap-2">
-              <h3 className="me-md-3">{ProfileData.username}</h3>
-              <button className="btn btn-outline-secondary btn-sm">Edit Profile</button>
+              <h3 className="me-md-3">{profile?.username}</h3>
+              <button className="btn btn-outline-secondary btn-sm" onClick={handleEditClick}>Edit Profile</button>
               <button className="btn btn-outline-secondary btn-sm">View Archive</button>
             </div>
 
@@ -58,7 +62,7 @@ function Profile() {
               <p><b>333</b> following</p>
             </div>
 
-            <p className="bio">{ProfileData.bio}</p>
+            <p className="bio">{profile?.bio}</p>
             <p className="bio">
               💼 CEO | Wayne Enterprises <br />
               🌆 Living in Gotham <br />

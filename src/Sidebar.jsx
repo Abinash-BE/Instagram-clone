@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { ProfileContext } from './ProfileContext.jsx'
 
 function Sidebar() {
 
   const navigate = useNavigate();
+  const { profile } = useContext(ProfileContext);
   const handleProfileClick = () => {
-    navigate('/Profile');
+    navigate('/profile');
   } 
 
   return (
@@ -20,7 +22,7 @@ function Sidebar() {
         <div><i className="bi bi-heart fs-5"></i>Notifications</div>
         <div><i className="bi bi-plus-square fs-5"></i>Create</div>
         <div onClick={handleProfileClick} className='sidebar-item'>
-          <img src='/assets/1662496028662.jpg' alt='Profile' className='sidebar-profile-img'/>
+          <img src={profile?.profile_picture || '/assets/1662496028662.jpg'} alt='Profile' className='sidebar-profile-img'/>
           <span>Profile</span>
         </div>
     </div>

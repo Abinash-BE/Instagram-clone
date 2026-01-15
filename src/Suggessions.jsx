@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PROFILE, SUGGESTIONS } from './data';
+import { SUGGESTIONS } from './data';
+import { ProfileContext } from './ProfileContext.jsx';
 
 function Suggestions() {
   const navigate = useNavigate();
+  const { profile } = useContext(ProfileContext);
 
   const handleProfileClick = () => {
-    navigate('/Profile');
+    navigate('/profile');
   };
 
   return (
     <div>
       <div className='suggestions-section w-75 m-4'>
-        {PROFILE ? (
+        {profile ? (
           <div
             className='d-flex align-items-center'
             style={{ cursor: 'pointer' }}
@@ -20,10 +22,10 @@ function Suggestions() {
           >
             <img
               className='db rounded-circle'
-              src={PROFILE.profile_picture}
+              src={profile.profile_picture}
               alt='profile pic'
             />
-            <h6 className='ms-2'>{PROFILE.username}</h6>
+            <h6 className='ms-2'>{profile.username}</h6>
             <small className='ms-auto text-primary'>Switch</small>
           </div>
         ) : (

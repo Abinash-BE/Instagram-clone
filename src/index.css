@@ -486,3 +486,41 @@ body {
   object-fit: cover;
   margin-right: 0px;
 }
+
+.edit-profile-container h1{
+  font-size: 25px;
+  font-family: helvetica;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.edit-profile-container{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.edit-profile-forms{
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid #ccc
+}
+
+.edit-profile-container input,
+.edit-profile-container textarea{
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.edit-profile-btn{
+  background-color: lightgray;
+  color: black;
+  font-size: 12px;
+}
